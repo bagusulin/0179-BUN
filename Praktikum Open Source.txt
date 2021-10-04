@@ -8,3 +8,5 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 melakukan update data di 0179-BUN pada tanggal 04 10 2021
 lakukan add, commit, git push
+
+G.231.19.0179_Bagus Uli Nuha
