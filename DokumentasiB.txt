@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Diri 0179</title>
+</head>
+<body>
+<?php
+$nama = $_POST['nama'];
+$nim = $_POST['nim'];
+$alamat = $_POST['alamat'];
+$jk = $_POST['jk'];
+$jurusan = $_POST['jurusan'];
+$kata = $_POST['kata'];
+$jml = $_POST['jml'];
+
+#untuk upload foto
+$lokasi_file=$_FILES['foto']['tmp_name'];
+$nama_file=$_FILES['foto']['name'];
+
+move_uploaded_file($lokasi_file,"foto/$nama_file");
+
+#Jenis Kelamin
+if($jk=="L"){
+    $jenis="Laki-Laki";
+}else {
+    $jenis="Perempuan";
+}
+
+#looping
+function ulang(){
+    $kata = $_POST['kata'];
+    $ulang = $_POST['jml'];
+
+    for($i=1;$i<=$ulang;$i++){
+    echo "$i.$kata";
+    echo "<br>";
+}
+}
+?>
+<table>
+    <tr>
+        <td>Foto</td>
+        <td><img src="foto/<?=$nama_file?>"></td>
+    </tr>
+    <tr>
+        <td>NIM</td>
+        <td><?=$nim?></td>
+    </tr>
+    <tr>
+        <td>Nama</td>
+        <td><?=$nama?></td>
+    </tr>
+    <tr>
+        <td>Alamat</td>
+        <td><?=$alamat?></td>
+    </tr>
+    <tr>
+        <td>Jenis Kelamin</td>
+        <td><?=$jenis?></td>
+    </tr>
+    <tr>
+        <td>Jurusan</td>
+        <td><?=$jurusan?></td>
+    </tr>
+    <tr>
+        <td>Kata Yang diulang</td>
+        <td><?=ulang()?></td>
+    </tr>
+</table>
+</body>
+</html>
