@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contoh program Form</title>
+</head>
+<body>
+    <form action="contoh1.php" method="post" enctype="multipart/form-data">
+        <table>
+        <tr>
+            <td><Label>Foto</Label></td>
+            <td><input type="file" name="foto" id="foto"></td>
+        </tr>
+        <tr>
+            <td><label>NIM</label></td>
+            <td><input type="text" name="nim" placeholder="Masukan NIM"></td>
+        </tr>
+        <tr>
+            <td><label>Nama</label> <br></td>
+            <td><input name="nama" type="text" placeholder="Masukkan nama"></td>
+        </tr>
+        <tr>
+            <td><label>Alamat</label> <br></td>
+            <td><input name="alamat" type="text" placeholder="Masukkan alamat"></td>
+        </tr>
+        <tr>
+            <td><label>Jenis Kelamin</label><br></td>
+            <td><input type="radio" name="jk" value="L">Laki-laki
+            <input type="radio" name="jk" value="P">Perempuan</td>
+        </tr>
+        <tr>
+            <td>Jurusan</td>
+            <td><select name="jurusan">
+                <option value="ftik">FTIK</option>
+                <option value="hukum">Hukum</option>
+                <option value="ekonomi">Ekonomi</option>
+                <option value="Teknik">Teknik</option>
+                <option value="tani">Pertanian</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td><label>Masukan kata</label></td>
+            <td><input type="text" name="kata"></td>
+        </tr>
+            <td><label>Jumlah Perulangan</label></td>
+            <td><input type="text" name="jml"></td>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Simpan"></td>
+        </tr>
+        </table>
+    </form>
+</body>
+</html>
