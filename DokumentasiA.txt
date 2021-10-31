@@ -1,3 +1,5 @@
+
+//Bagus Uli Nuha_G.231.19.0179
 public class Logika {
     public static void main(String[] args) {
     // Buat variabel
